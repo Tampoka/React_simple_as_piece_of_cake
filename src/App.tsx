@@ -3,7 +3,7 @@ import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 
-function App(props: any) {
+function App() {
     console.log('App is rendering')
 
     return (
