@@ -12,9 +12,9 @@ function App() {
             <PageTitle title={"My friends"}/>
             <OnOff isOn={true}/>
             <OnOff isOn={false}/>
-            <OnOff2 on={false}/>
-            <OnOff2 on={true}/>
-            <OnOff2 on={false}/>
+            <OnOff2 />
+            <OnOff2 />
+            <OnOff2 />
             <Rating value={3}/>
             <Accordion titleValue={"What to eat"} collapsed={true}/>
             <Accordion titleValue={"What to read"} collapsed={false}/>
