@@ -3,16 +3,18 @@ import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
+import OnOff2 from "./components/OnOff2/OnOff2";
 
 function App() {
-    console.log('App is rendering')
-
     return (
         <div>
             <PageTitle title={"This as App component"}/>
             <PageTitle title={"My friends"}/>
             <OnOff isOn={true}/>
             <OnOff isOn={false}/>
+            <OnOff2 on={false}/>
+            <OnOff2 on={true}/>
+            <OnOff2 on={false}/>
             <Rating value={3}/>
             <Accordion titleValue={"What to eat"} collapsed={true}/>
             <Accordion titleValue={"What to read"} collapsed={false}/>
@@ -29,6 +31,7 @@ function App() {
 type PageTitlePropsType = {
     title: string
 }
+
 function PageTitle(props: PageTitlePropsType) {
     return <h1>{props.title}</h1>
 }
