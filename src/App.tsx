@@ -5,6 +5,7 @@ import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import OnOff2 from "./components/OnOff2/OnOff2";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 
 function App() {
     return (
@@ -16,17 +17,17 @@ function App() {
             <OnOff2 />
             <OnOff2 />
             <OnOff2 />
-            {/*<Rating value={3}/>*/}
-            <Accordion titleValue={"What to eat"} collapsed={true}/>
-            <Accordion titleValue={"What to read"} collapsed={false}/>
-            <UncontrolledAccordion titleValue={"Can you see me?"}/>
-            <UncontrolledAccordion titleValue={"Click me!!!"}/>
-            <Rating value={0}/>
-            <Rating value={1}/>
+            {/*<Accordion titleValue={"What to eat"} collapsed={true}/>*/}
+            {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
+            {/*<UncontrolledAccordion titleValue={"Can you see me?"}/>*/}
+            {/*<UncontrolledAccordion titleValue={"Click me!!!"}/>*/}
+            {/*<Rating value={0}/>*/}
+            {/*<Rating value={1}/>*/}
             <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            <UncontrolledRating/>
+            {/*<Rating value={3}/>*/}
+            {/*<Rating value={4}/>*/}
+            {/*<Rating value={5}/>*/}
         </div>
     );
 }
