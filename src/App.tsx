@@ -9,7 +9,7 @@ import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRati
 
 function App() {
     return (
-        <div>
+        <div className={"App"}>
             <PageTitle title={"This as App component"}/>
             <PageTitle title={"My friends"}/>
             <OnOff />
@@ -19,7 +19,7 @@ function App() {
             <OnOff2 />
             {/*<Accordion titleValue={"What to eat"} collapsed={true}/>*/}
             {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
-            {/*<UncontrolledAccordion titleValue={"Can you see me?"}/>*/}
+            <UncontrolledAccordion titleValue={"Can you see me?"}/>
             {/*<UncontrolledAccordion titleValue={"Click me!!!"}/>*/}
             {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
