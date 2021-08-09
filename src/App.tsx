@@ -4,6 +4,7 @@ import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import OnOff2 from "./components/OnOff2/OnOff2";
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 
 function App() {
     return (
@@ -18,6 +19,8 @@ function App() {
             <Rating value={3}/>
             <Accordion titleValue={"What to eat"} collapsed={true}/>
             <Accordion titleValue={"What to read"} collapsed={false}/>
+            <UncontrolledAccordion titleValue={"Can you see me?"}/>
+            <UncontrolledAccordion titleValue={"Click me!!!"}/>
             <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
