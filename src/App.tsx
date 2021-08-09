@@ -11,12 +11,12 @@ function App() {
         <div>
             <PageTitle title={"This as App component"}/>
             <PageTitle title={"My friends"}/>
-            <OnOff isOn={true}/>
-            <OnOff isOn={false}/>
+            <OnOff />
+            <OnOff />
             <OnOff2 />
             <OnOff2 />
             <OnOff2 />
-            <Rating value={3}/>
+            {/*<Rating value={3}/>*/}
             <Accordion titleValue={"What to eat"} collapsed={true}/>
             <Accordion titleValue={"What to read"} collapsed={false}/>
             <UncontrolledAccordion titleValue={"Can you see me?"}/>

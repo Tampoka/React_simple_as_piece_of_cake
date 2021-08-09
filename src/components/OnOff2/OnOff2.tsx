@@ -9,6 +9,7 @@ const OnOff2 = () => {
         display: "inline-block",
         padding: "5px",
         backgroundColor:on?"green":"white"
+
     };
     const ofStyle = {
         width: "30px",
@@ -30,8 +31,8 @@ const OnOff2 = () => {
         backgroundColor:on?"green":"red"
     };
     return <div>
-        <div style={onStyle} onClick={()=>{setOn(true)}}>On</div>
-        <div style={ofStyle} onClick={()=>{setOn(false)}}>Off</div>
+        <div style={onStyle} onClick={()=>!on&&setOn(true)}>On</div>
+        <div style={ofStyle} onClick={()=>on&&setOn(false)}>Off</div>
         <div style={indicatorStyle}></div>
     </div>
 }
