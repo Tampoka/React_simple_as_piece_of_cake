@@ -1,4 +1,28 @@
 .App {
     width: 600px;
     margin: 20px auto;
+    text-align: center;
+}
+
+.accUncontrolled {
+    text-align: center;
+    border: 2px solid aquamarine;
+    margin: 10px;
+    padding: 10px;
+}
+
+.accBody {
+    list-style: none;
+}
+
+.rating {
+    border: 2px solid aquamarine;
+    margin: 10px;
+    padding: 10px;
+}
+
+.ratingUncontrolled {
+    border: 2px solid aquamarine;
+    margin: 10px;
+    padding: 10px;
 }

@@ -1,10 +1,11 @@
 import React, {useState} from "react";
+import "./../../App.css"
 
  function UncontrolledRating() {
     console.log('UncontrolledRating is rendering')
      let [value,setValue]=useState(0)
     return (
-        <div>
+        <div className={"ratingUncontrolled"}>
             <Star selected={value>0}/>
             <button onClick={()=>setValue(1)}>1</button>
             <Star selected={value>1}/>
