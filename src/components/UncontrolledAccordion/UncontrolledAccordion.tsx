@@ -19,14 +19,14 @@ type AccordionTitlePropsType = {
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-    console.log('AccordionTitle is rendering')
+    // console.log('AccordionTitle is rendering')
     return <h2>{props.title}</h2>
 
 
 }
 
 function AccordionBody() {
-    console.log('AccordionBody is rendering')
+    // console.log('AccordionBody is rendering')
     return <ul className={"accBody"}>
         <li>1</li>
         <li>2</li>
