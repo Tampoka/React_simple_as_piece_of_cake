@@ -1,12 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 
-const StarRating=()=>{
+const StarRating = () => {
+    const [rating, setRating]=useState(0)
     return (
         <div className="starRating">
-            {[...Array(5)].map((star,index)=>{
-                index+=1
+            {[...Array(5)].map((star, index) => {
+                index += 1
                 return (
-                    <span>&#9733;</span>
+                    <button type={"button"}
+                            key={index}
+                            className={index <= rating ? "on" : "of"}
+                            onClick={() => setRating(index)}>
+                        <span className="star">&#9733;</span>
+                    </button>
                 )
             })}
         </div>
