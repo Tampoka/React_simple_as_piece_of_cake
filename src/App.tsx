@@ -6,6 +6,7 @@ import OnOff2 from "./components/OnOff2/OnOff2";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 import Accordion from "./components/Accordion/Accordion";
+import StarRating from "./components/StarRating/StarRating";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
+            <StarRating/>
         </div>
     );
 }
