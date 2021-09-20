@@ -24,7 +24,7 @@ type StarPropsType={
     selected:boolean
 }
 function Star(props: StarPropsType) {
-    console.log('star is rendering')
+    // console.log('star is rendering')
     return props.selected ? <span><b>star </b></span> : <span>star </span>;
 }
 
