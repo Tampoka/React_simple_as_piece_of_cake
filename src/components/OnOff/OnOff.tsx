@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import s from "./OnOff.module.css"
 
 const OnOff = () => {
-    let [on, setOn] = useState(true)
+    let [on, setOn] = useState(false)
     return <div className={s.container}>
         <div className={s.on_switch} style={{backgroundColor: on ? 'green' : 'white'}} onClick={() => {
             !on && setOn(true)

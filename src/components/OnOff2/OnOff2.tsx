@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 
 const OnOff2 = () => {
-    let [on,setOn]=useState(false)
+    let [on,setOn]=useState(true)
     const onStyle = {
         width: "30px",
         height: "20px",
