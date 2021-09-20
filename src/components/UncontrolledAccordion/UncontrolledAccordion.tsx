@@ -26,7 +26,7 @@ type AccordionTitlePropsType = {
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     // console.log('AccordionTitle is rendering')
-    return <h2 onClick={props.collapseHandler}>{props.title} </h2>
+    return <h2 onClick={props.collapseHandler} className="accordionTitle">{props.title} </h2>
 
 
 }
