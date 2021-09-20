@@ -1,0 +1,11 @@
+
+button {
+    background-color: transparent;
+    border: 5px solid red;
+    outline: none;
+    cursor:pointer;
+}
+
+/*.star {*/
+/*    color: grey;*/
+/*}*/

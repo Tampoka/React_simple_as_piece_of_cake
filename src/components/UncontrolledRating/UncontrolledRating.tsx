@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./../../App.css"
 
  function UncontrolledRating() {
-    console.log('UncontrolledRating is rendering')
+    // console.log('UncontrolledRating is rendering')
      let [value,setValue]=useState(0)
      const onRatingChangeHandler=()=>{
         setValue(value+1)

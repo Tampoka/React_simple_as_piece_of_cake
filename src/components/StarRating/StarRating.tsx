@@ -1,17 +1,18 @@
 import React, {useState} from "react";
+import s from "./StarRating.module.css"
 
 const StarRating = () => {
-    const [rating, setRating]=useState(0)
+    const [rating, setRating] = useState(0)
     return (
-        <div className="starRating">
+        <div className={s.starRating}>
             {[...Array(5)].map((star, index) => {
                 index += 1
                 return (
-                    <button type={"button"}
+                    <button type="button"
                             key={index}
-                            className={index <= rating ? "on" : "of"}
-                            onClick={() => setRating(index)}>
-                        <span className="star">&#9733;</span>
+                            onClick={() => setRating(index)}
+                            style={{color: index <= rating ? 'darkred' : 'grey'}}>
+                        <span>&#9733;</span>
                     </button>
                 )
             })}
@@ -20,3 +21,4 @@ const StarRating = () => {
 }
 
 export default StarRating
+
