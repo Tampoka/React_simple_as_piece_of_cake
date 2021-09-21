@@ -6,6 +6,7 @@ import OnOff2 from "./components/OnOff2/OnOff2";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 import StarRating from "./components/StarRating/StarRating";
+import Accordion from "./components/Accordion/Accordion";
 
 function App() {
     let[ratingValue,setRatingValue]=useState<RatingValueType>(0)
@@ -18,7 +19,7 @@ function App() {
             <OnOff2/>
             <OnOff2/>
             <OnOff2/>
-            {/*<Accordion titleValue={"What to eat"}/>*/}
+            <Accordion titleValue={"What to eat"}/>
             {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
             <UncontrolledAccordion titleValue={"Can you see me?"}/>
             {/*<UncontrolledAccordion titleValue={"Click me!!!"}/>*/}
