@@ -18,7 +18,7 @@ function App() {
             <OnOff2/>
             <OnOff2/>
             <OnOff2/>
-            {/*<Accordion titleValue={"What to eat"} collapsed={true}/>*/}
+            {/*<Accordion titleValue={"What to eat"}/>*/}
             {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
             <UncontrolledAccordion titleValue={"Can you see me?"}/>
             {/*<UncontrolledAccordion titleValue={"Click me!!!"}/>*/}
