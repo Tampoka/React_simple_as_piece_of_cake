@@ -5,7 +5,6 @@ import OnOff from "./components/OnOff/OnOff";
 import OnOff2 from "./components/OnOff2/OnOff2";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
-import Accordion from "./components/Accordion/Accordion";
 import StarRating from "./components/StarRating/StarRating";
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
             {/*<UncontrolledAccordion titleValue={"Click me!!!"}/>*/}
             {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
-            <Rating value={4}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledRating/>
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
