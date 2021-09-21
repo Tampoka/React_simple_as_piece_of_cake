@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import {Rating} from "./components/Rating/Rating";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import OnOff2 from "./components/OnOff2/OnOff2";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
@@ -9,6 +9,7 @@ import Accordion from "./components/Accordion/Accordion";
 import StarRating from "./components/StarRating/StarRating";
 
 function App() {
+    let[ratingValue,setRatingValue]=useState<RatingValueType>(0)
     return (
         <div className={"App"}>
             <PageTitle title={"This as App component"}/>

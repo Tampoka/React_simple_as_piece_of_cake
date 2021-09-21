@@ -2,9 +2,9 @@ import React from "react";
 import "./../../App.css"
 
 type RatingPropsType = {
-    value: 0 | 1 | 2 | 3 | 4 | 5
+    value: RatingValueType
 }
-
+export type RatingValueType=0 | 1 | 2 | 3 | 4 | 5
 export function Rating(props: RatingPropsType) {
     // console.log('Rating is rendering')
     return (
