@@ -7,16 +7,19 @@ import UncontrolledAccordion from "./components/UncontrolledAccordion/Uncontroll
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 import StarRating from "./components/StarRating/StarRating";
 import Accordion from "./components/Accordion/Accordion";
+import OnOff2Uncontrolled from "./components/OnOff2Uncontrolled/OnOff2Uncontrolled";
 
 function App() {
     let[ratingValue,setRatingValue]=useState<RatingValueType>(0)
     let [collapsed, setCollapsed]=useState<boolean>(false)
+    let[on, setOn]=useState<boolean>(false)
     return (
         <div className={"App"}>
             <PageTitle title={"This as App component"}/>
             <PageTitle title={"My friends"}/>
             <OnOff/>
-            <OnOff2/>
+            <OnOff2 onClick={setOn} on={on}/>
+            <OnOff2Uncontrolled/>
             <Accordion titleValue={"What to eat"} onClick={setCollapsed} collapsed={collapsed}/>
             {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
             <UncontrolledAccordion titleValue={"Can you see me?"}/>
