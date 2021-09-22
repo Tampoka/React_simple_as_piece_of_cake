@@ -10,16 +10,14 @@ import Accordion from "./components/Accordion/Accordion";
 
 function App() {
     let[ratingValue,setRatingValue]=useState<RatingValueType>(0)
+    let [collapsed, setCollapsed]=useState<boolean>(false)
     return (
         <div className={"App"}>
             <PageTitle title={"This as App component"}/>
             <PageTitle title={"My friends"}/>
             <OnOff/>
-            <OnOff/>
             <OnOff2/>
-            <OnOff2/>
-            <OnOff2/>
-            <Accordion titleValue={"What to eat"}/>
+            <Accordion titleValue={"What to eat"} onClick={setCollapsed} collapsed={collapsed}/>
             {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
             <UncontrolledAccordion titleValue={"Can you see me?"}/>
             {/*<UncontrolledAccordion titleValue={"Click me!!!"}/>*/}
