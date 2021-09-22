@@ -17,9 +17,9 @@ function App() {
         <div className={"App"}>
             <PageTitle title={"This as App component"}/>
             <PageTitle title={"My friends"}/>
-            <OnOff/>
-            <OnOff2 onClick={setOn} on={on}/>
-            <OnOff2Uncontrolled/>
+         {/*   <OnOff/>
+            <OnOff2 onClick={setOn} on={on}/>*/}
+            <OnOff2Uncontrolled onChange={setOn}/>{on.toString()}
             <Accordion titleValue={"What to eat"} onClick={setCollapsed} collapsed={collapsed}/>
             {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
             <UncontrolledAccordion titleValue={"Can you see me?"}/>
