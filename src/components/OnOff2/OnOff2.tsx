@@ -4,7 +4,7 @@ export type OnOfPropsType={
     onClick:(on:boolean)=>void
     on:boolean
 }
-const OnOff2 = (props:OnOfPropsType) => {
+export const OnOff2 = (props:OnOfPropsType) => {
     const onStyle = {
         width: "30px",
         height: "20px",
@@ -40,4 +40,3 @@ const OnOff2 = (props:OnOfPropsType) => {
     </div>
 }
 
-export default OnOff2
