@@ -1,19 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Rating} from "./Rating";
+import {Rating, RatingValueType} from "./Rating";
 
 
 export default {
     title: 'Rating stories',
     component: Rating,
     argTypes: {
- /*       value: RatingValueType,
-        onClick:(value:RatingValueType)=>void,*/
+        /*       value: RatingValueType,
+               onClick:(value:RatingValueType)=>void,*/
     },
 } as ComponentMeta<typeof Rating>;
 
 const Template: ComponentStory<typeof Rating> = (args) => <Rating {...args} />;
 
+export const ChangeRating = () => {
+    const [rating, setRating] = useState<RatingValueType>(0)
+    return <Rating value={rating} onClick={setRating}/>
+}
 export const EmptyRating = Template.bind({});
 EmptyRating.args = {
     value: 0,
