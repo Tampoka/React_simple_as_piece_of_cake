@@ -14,7 +14,7 @@ export default {
 
 const Template: ComponentStory<typeof Rating> = (args) => <Rating {...args} />;
 
-export const ChangeRating = () => {
+export const RatingChanging = () => {
     const [rating, setRating] = useState<RatingValueType>(0)
     return <Rating value={rating} onClick={setRating}/>
 }
