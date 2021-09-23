@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
-import OnOff2 from "./components/OnOff2/OnOff2";
+import {OnOff2} from "./components/OnOff2/OnOff2";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 import StarRating from "./components/StarRating/StarRating";
@@ -17,8 +17,8 @@ function App() {
         <div className={"App"}>
             <PageTitle title={"This as App component"}/>
             <PageTitle title={"My friends"}/>
-         {/*   <OnOff/>
-            <OnOff2 onClick={setOn} on={on}/>*/}
+            <OnOff/>
+            <OnOff2 onClick={setOn} on={on}/>
             <OnOff2Uncontrolled onChange={setOn}/>{on.toString()}
             <Accordion titleValue={"What to eat"} onClick={setCollapsed} collapsed={collapsed}/>
             {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
