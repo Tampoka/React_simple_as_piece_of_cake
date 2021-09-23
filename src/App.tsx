@@ -21,7 +21,6 @@ function App() {
             <OnOff2 onClick={setOn} on={on}/>
             <OnOff2Uncontrolled onChange={setOn}/>{on.toString()}
             <Accordion titleValue={"What to eat"} onClick={setCollapsed} collapsed={collapsed}/>
-            {/*<Accordion titleValue={"What to read"} collapsed={false}/>*/}
             <UncontrolledAccordion titleValue={"Can you see me?"}/>
             {/*<UncontrolledAccordion titleValue={"Click me!!!"}/>*/}
             {/*<Rating value={0}/>*/}
