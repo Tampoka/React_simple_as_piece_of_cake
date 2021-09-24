@@ -27,7 +27,7 @@ function App() {
             {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <UncontrolledRating/>
+            <UncontrolledRating  onChange={setRatingValue}/>
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
