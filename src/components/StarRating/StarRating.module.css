@@ -6,6 +6,7 @@ button {
     background-color: transparent;
     outline: none;
     cursor:pointer;
+    font-size: 30px;
 }
 
 /*.star {*/
