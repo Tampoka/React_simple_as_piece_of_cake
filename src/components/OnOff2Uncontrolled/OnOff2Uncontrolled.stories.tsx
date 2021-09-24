@@ -12,3 +12,5 @@ export const OnOffSwitching = () => {
     const [on, setOn] = useState<boolean>(false)
     return <OnOff2Uncontrolled  onChange={setOn} defaultOn={true}/>
 }
+export const OnOffBug = () => <div>Unsync when change defaultValue when already rendered</div>
+// export const OnOffDefaultValue = () => <input defaultValue={"yo"}/>
