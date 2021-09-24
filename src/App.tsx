@@ -6,8 +6,8 @@ import {OnOff2} from "./components/OnOff2/OnOff2";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 import StarRating from "./components/StarRating/StarRating";
-import Accordion from "./components/Accordion/Accordion";
 import OnOff2Uncontrolled from "./components/OnOff2Uncontrolled/OnOff2Uncontrolled";
+import {Accordion} from "./components/Accordion/Accordion";
 
 function App() {
     let[ratingValue,setRatingValue]=useState<RatingValueType>(0)
