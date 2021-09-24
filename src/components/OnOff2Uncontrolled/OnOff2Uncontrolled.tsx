@@ -3,7 +3,7 @@ import React, {useState} from "react"
 type PropsType = {
     onChange: (on: boolean) => void
 }
-const OnOff2Uncontrolled = (props: PropsType) => {
+export const OnOff2Uncontrolled = (props: PropsType) => {
     let [on, setOn] = useState(true)
     const onStyle = {
         width: "30px",
@@ -49,4 +49,3 @@ const OnOff2Uncontrolled = (props: PropsType) => {
     </div>
 }
 
-export default OnOff2Uncontrolled

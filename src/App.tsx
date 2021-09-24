@@ -4,10 +4,10 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {OnOff2} from "./components/OnOff2/OnOff2";
 import StarRating from "./components/StarRating/StarRating";
-import OnOff2Uncontrolled from "./components/OnOff2Uncontrolled/OnOff2Uncontrolled";
 import {Accordion} from "./components/Accordion/Accordion";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import {OnOff2Uncontrolled} from "./components/OnOff2Uncontrolled/OnOff2Uncontrolled";
 
 function App() {
     let[ratingValue,setRatingValue]=useState<RatingValueType>(0)
