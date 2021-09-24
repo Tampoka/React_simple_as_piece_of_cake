@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {OnOff2} from "../OnOff2/OnOff2";
+import {OnOff2} from "./OnOff2";
 
 export default {
     title: 'OnOff2',
