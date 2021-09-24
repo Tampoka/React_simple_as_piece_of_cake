@@ -6,7 +6,7 @@ type AccordionPropsType = {
     collapsed:boolean
 }
 
-function Accordion(props: AccordionPropsType) {
+ export function Accordion(props: AccordionPropsType) {
     // console.log('Accordion is rendering')
 
     return <div>
@@ -38,4 +38,3 @@ function AccordionBody() {
 
 }
 
-export default Accordion
