@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./../../App.css"
 
-function UncontrolledRating() {
+export function UncontrolledRating() {
     // console.log('UncontrolledRating is rendering')
     let [value, setValue] = useState(0)
 
@@ -29,4 +29,3 @@ function Star(props: StarPropsType) {
     }}>{props.selected ? <b>star </b> : "star "}</span>
 }
 
-export default UncontrolledRating
