@@ -10,13 +10,14 @@ export default {
 const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args} />;
 
 export const AccordionCollapsing = () => {
-    return <Accordion on={on} onClick={setOn}/>
+    const [collapsed, setCollapsed]=useState<boolean>(false)
+    return <Accordion titleValue="Menu" onClick={setCollapsed} collapsed={collapsed}/>
 }
 export const AccordionNotCollapsed = Template.bind({});
-Accordion.args = {
-    on: true,
+AccordionNotCollapsed.args = {
+    collapsed: false,
 };
 export const AccordionCollapsed = Template.bind({});
 AccordionCollapsed.args = {
-    on: false,
+    collapsed: true,
 };
