@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import s from "./StarRating.module.css"
 
-const StarRating = () => {
+export const StarRating = () => {
     const [rating, setRating] = useState(0)
     return (
         <div className={s.starRating}>
@@ -20,5 +20,5 @@ const StarRating = () => {
     )
 }
 
-export default StarRating
+
 
