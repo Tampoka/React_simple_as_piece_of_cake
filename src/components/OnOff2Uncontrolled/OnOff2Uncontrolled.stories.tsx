@@ -10,5 +10,5 @@ export default {
 
 export const OnOffSwitching = () => {
     const [on, setOn] = useState<boolean>(false)
-    return <OnOff2Uncontrolled  onChange={setOn}/>
+    return <OnOff2Uncontrolled  onChange={setOn} defaultOn={true}/>
 }
