@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {Accordion} from "./Accordion";
+import {action} from "@storybook/addon-actions";
 
 export default {
     title: 'Accordion',
     component: Accordion,
     argTypes: {},
 } as ComponentMeta<typeof Accordion>;
+
+const callback=action("accordion mode change event fired")
+const onClickCallback=action("some item was clicked")
 
 const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args} />;
 
