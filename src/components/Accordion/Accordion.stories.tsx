@@ -9,20 +9,20 @@ export default {
     argTypes: {},
 } as ComponentMeta<typeof Accordion>;
 
-const callback=action("accordion mode change event fired")
-const onClickCallback=action("some item was clicked")
+const callback = action("accordion mode change event fired")
+const onClickCallback = action("some item was clicked")
 
 const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args} />;
 
 export const AccordionCollapsing = () => {
-    const [collapsed, setCollapsed]=useState<boolean>(false)
+    const [collapsed, setCollapsed] = useState<boolean>(false)
     return <Accordion titleValue="Menu" onClick={setCollapsed} collapsed={collapsed}/>
 }
 export const AccordionNotCollapsed = Template.bind({});
 AccordionNotCollapsed.args = {
     collapsed: false,
 };
-export const AccordionCollapsed = Template.bind({});
-AccordionCollapsed.args = {
-    collapsed: true,
-};
+export const AccordionCollapsedMode = () => <Accordion
+    titleValue={"Menu"}
+    onClick={onClickCallback} collapsed={true}/>
+
