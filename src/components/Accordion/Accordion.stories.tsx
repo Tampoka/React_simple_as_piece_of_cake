@@ -18,12 +18,11 @@ export const AccordionCollapsing = () => {
     const [collapsed, setCollapsed] = useState<boolean>(false)
     return <Accordion titleValue="Menu" onClick={setCollapsed} collapsed={collapsed}/>
 }
-
+export const AccordionNotCollapsed = Template.bind({});
+AccordionNotCollapsed.args = {
+    collapsed: false,
+};
 export const AccordionCollapsedMode = () => <Accordion
     titleValue={"Menu"}
     onClick={onClickCallback} collapsed={true}/>
-
-export const AccordionNotCollapsedMode = () => <Accordion
-    titleValue={"Users"}
-    onClick={onClickCallback} collapsed={false} items={[{title:"John", value:3},{title:"Bob",value:45},{title:"Kate", value:7}]}/>
 
