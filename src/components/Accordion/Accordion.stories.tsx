@@ -20,9 +20,12 @@ AccordionCollapsedMode.args={
     collapsed:true,
     onClick:onClickCallback
 }
-export const AccordionNotCollapsed = Template.bind({});
-AccordionNotCollapsed.args = {
+
+export const AccordionUncollapsedMode = Template.bind({});
+AccordionUncollapsedMode.args = {
     collapsed: false,
+    titleValue:"Users",
+    onClick:onClickCallback
 };
 
 
