@@ -28,4 +28,8 @@ AccordionUncollapsedMode.args = {
     onClick:onClickCallback
 };
 
+export const ModeChanging=()=>{
+    const [value,setValue]=useState<boolean>(true)
+    return <Accordion titleValue={"Users"} onClick={()=>setValue(!value)} collapsed={value}/>
+}
 
