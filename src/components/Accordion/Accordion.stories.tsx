@@ -14,15 +14,15 @@ const onClickCallback = action("some item was clicked")
 
 const Template: Story<AccordionPropsType> = (args) => <Accordion {...args} />;
 
-export const AccordionCollapsing = () => {
-    const [collapsed, setCollapsed] = useState<boolean>(false)
-    return <Accordion titleValue="Menu" onClick={setCollapsed} collapsed={collapsed}/>
+export const AccordionCollapsedMode = Template.bind({})
+AccordionCollapsedMode.args={
+    titleValue:"Menu",
+    collapsed:true,
+    onClick:onClickCallback
 }
 export const AccordionNotCollapsed = Template.bind({});
 AccordionNotCollapsed.args = {
     collapsed: false,
 };
-export const AccordionCollapsedMode = () => <Accordion
-    titleValue={"Menu"}
-    onClick={onClickCallback} collapsed={true}/>
+
 
