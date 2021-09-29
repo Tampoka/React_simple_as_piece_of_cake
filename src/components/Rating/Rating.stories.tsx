@@ -7,8 +7,8 @@ export default {
     title: 'Rating stories',
     component: Rating,
     argTypes: {
-        /*       value: RatingValueType,
-               onClick:(value:RatingValueType)=>void,*/
+        backgroundColor:{control:'color'}
+
     },
 } as ComponentMeta<typeof Rating>;
 
