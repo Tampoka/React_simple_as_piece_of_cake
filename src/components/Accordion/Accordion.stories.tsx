@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
-import {Story} from '@storybook/react';
+import {ComponentMeta, Story} from '@storybook/react';
 import {Accordion, AccordionPropsType} from "./Accordion";
 import {action} from "@storybook/addon-actions";
 
+export default {
+    title: 'Accordion',
+    component: Accordion,
+    argTypes: {},
+} as ComponentMeta<typeof Accordion>;
 
 const callback = action("accordion mode change event fired")
 const onClickCallback = action("some item was clicked")
@@ -14,14 +19,14 @@ const callbackProps={
 }
 export const AccordionCollapsedMode = Template.bind({})
 AccordionCollapsedMode.args={
-    ...onClickCallback,
+    ...callbackProps,
     titleValue:"Menu",
     collapsed:true,
 }
 
 export const AccordionOpenMode = Template.bind({});
 AccordionOpenMode.args = {
-    ...onClickCallback,
+    ...callbackProps,
     collapsed: false,
     titleValue:"Users",
 };

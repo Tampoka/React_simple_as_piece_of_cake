@@ -1,11 +1,18 @@
 import React from "react";
 
 export type AccordionPropsType = {
+    /**
+     * Accordion title
+     */
     titleValue: string
+    /**
+     * Callback that is called when any item clicked
+     * @param collapsed
+     */
     onClick:(collapsed:boolean)=>void
+
     collapsed:boolean
 }
-const items=[{title:"John", value:3},{title:"Bob",value:45},{title:"Kate", value:7}]
  export function Accordion(props: AccordionPropsType) {
     // console.log('Accordion is rendering')
 

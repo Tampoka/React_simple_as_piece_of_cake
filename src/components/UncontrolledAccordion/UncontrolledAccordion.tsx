@@ -3,6 +3,9 @@ import "./../../App.css"
 
 type UncontrolledAccordionPropsType = {
     titleValue: string
+    /**
+     * accordion title
+     */
 }
 
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
