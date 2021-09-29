@@ -3,7 +3,7 @@ import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {OnOff2} from "./OnOff2";
 
 export default {
-    title: 'OnOff2',
+    title: 'components/OnOff2',
     component: OnOff2,
     argTypes: {},
 } as ComponentMeta<typeof OnOff2>;
