@@ -13,6 +13,11 @@ export const UncontrolledInputWithTrackedValue = () => {
     setValue(actualValue)}
     }/>---{value}--</>
 }
+
+export const GetValueOfUncontrolledInputByButtonPress = () => {
+    const [value, setValue]=useState('')
+    return <><input /><button>save</button>-actual value: {value}</>
+}
 export const ControlledInputWithFixedValue = () => <input value={"google"}/>
 
 
