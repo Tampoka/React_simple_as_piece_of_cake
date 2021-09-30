@@ -23,7 +23,7 @@ export const GetValueOfUncontrolledInputByButtonPress = () => {
         const el = inputRef.current as HTMLInputElement
         setValue(el.value)
     }
-    return <><input id={"inputId"}/>
+    return <><input ref={inputRef} id={"inputId"}/>
         <button onClick={save}>save</button>-actual value: {value} </>
 }
 export const ControlledInputWithFixedValue = () => <input value={"google"}/>
