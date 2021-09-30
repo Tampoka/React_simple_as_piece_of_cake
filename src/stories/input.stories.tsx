@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 
 
 export default {
@@ -17,9 +17,11 @@ export const UncontrolledInputWithTrackedValue = () => {
 
 export const GetValueOfUncontrolledInputByButtonPress = () => {
     const [value, setValue] = useState('')
+    const inputRef=useRef(null)
     return <><input id={"inputId"}/>
         <button onClick={() => {
-            setValue("yo")
+            const el=document.getElementById("inputId") as HTMLInputElement
+            setValue(el.value)
         }}>save
         </button>
         -actual value: {value} </>
