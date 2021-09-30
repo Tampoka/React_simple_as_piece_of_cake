@@ -17,14 +17,14 @@ export const UncontrolledInputWithTrackedValue = () => {
 
 export const GetValueOfUncontrolledInputByButtonPress = () => {
     const [value, setValue] = useState('')
-    const inputRef=useRef(null)
+    const inputRef=useRef<HTMLInputElement>(null)
+    const save=() => {
+        // const el=document.getElementById("inputId") as HTMLInputElement
+        const el = inputRef.current as HTMLInputElement
+        setValue(el.value)
+    }
     return <><input id={"inputId"}/>
-        <button onClick={() => {
-            const el=document.getElementById("inputId") as HTMLInputElement
-            setValue(el.value)
-        }}>save
-        </button>
-        -actual value: {value} </>
+        <button onClick={save}>save</button>-actual value: {value} </>
 }
 export const ControlledInputWithFixedValue = () => <input value={"google"}/>
 
