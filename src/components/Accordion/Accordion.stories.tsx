@@ -15,6 +15,7 @@ const onClickCallback = action("some item was clicked")
 const Template: Story<AccordionPropsType> = (args) => <Accordion {...args} />;
 
 const callbackProps={
+    onChange:callback,
     onClick:onClickCallback
 }
 export const AccordionCollapsedMode = Template.bind({})
@@ -29,10 +30,11 @@ AccordionOpenMode.args = {
     ...callbackProps,
     collapsed: false,
     titleValue:"Users",
+    items:[{title:"Bob",value:4},{title:"John",value:7},{title:"Kate",value:5}]
 };
 
 export const ModeChanging=()=>{
     const [value,setValue]=useState<boolean>(true)
-    return <Accordion titleValue={"Users"} onClick={()=>setValue(!value)} collapsed={value}/>
+    return <Accordion titleValue={"Users"} onChange={()=>setValue(!value)} collapsed={value} onClick={callback} items={[{title:"Bob",value:4},{title:"John",value:7},{title:"Kate",value:5}]}/>
 }
 

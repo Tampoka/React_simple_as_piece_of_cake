@@ -10,7 +10,7 @@ export type AccordionPropsType = {
      * @param collapsed
      */
     onClick: (value: any) => void
-    onChange: () => void
+    onChange: (collapsed:boolean) => void
     collapsed: boolean
     items: ItemType[]
 }
@@ -24,8 +24,9 @@ export function Accordion(props: AccordionPropsType) {
 
     return <div>
         <AccordionTitle title={props.titleValue}
-                        onChange={props.onChange}/>
-        {!props.collapsed && <AccordionBody items={props.items} onClick={props.onClick}/>}
+                        onChange={()=>{props.onChange(!props.collapsed)}}/>
+        {!props.collapsed && <AccordionBody items={props.items}
+                                            onClick={props.onClick}/>}
     </div>
 }
 
@@ -36,7 +37,7 @@ type AccordionTitlePropsType = {
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     // console.log('AccordionTitle is rendering')
-    return <h3 onClick={(e) => props.onChange()}>{props.title}</h3>
+    return <h3 onChange={()=>props.onChange()}>-{props.title}-</h3>
 
 
 }
