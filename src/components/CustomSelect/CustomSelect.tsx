@@ -20,7 +20,7 @@ export function CustomSelect(props: CustomSelectPropsType) {
     }
     return (
         <div className={s.select_wrapper}>
-            <div onClick={() => setCollapsed(!collapsed)} className={s.select_trigger}>{props.selectValue}</div>
+            <div onClick={() => setCollapsed(!collapsed)} className={s.select_trigger}>{props.selectValue}<span className={s.select_triangle}>&#x25BC;</span></div>
             {!collapsed && props.items
                 .filter(i => i.title !== props.selectValue)
                 .map((i) => {
