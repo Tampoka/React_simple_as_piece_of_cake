@@ -39,12 +39,16 @@ export const ControlledInput = () => {
     return <input value={parentValue} onChange={onChange}/>
 }
 
-// export const ControlledCheckbox=()=>{
-//
-// }
-//
-// export const ControlledSelect=()=>{
-//
-// }
+export const ControlledCheckbox=()=>{
+    const [parentValue, setParentValue] = useState(false)
+    const onChange = (e:ChangeEvent<HTMLInputElement>) => {setParentValue(e.currentTarget.checked)
+
+    }
+    return <input type="checkbox" checked={parentValue} onChange={onChange}/>
+}
+
+export const ControlledSelect=()=>{
+
+}
 
 
