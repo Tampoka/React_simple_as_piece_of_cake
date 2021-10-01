@@ -1,5 +1,4 @@
 import React, {ChangeEvent, useRef, useState} from 'react';
-import {action} from "@storybook/addon-actions";
 
 
 export default {
@@ -33,7 +32,7 @@ export const ControlledInputWithFixedValue = () => <input value={"google"}/>
 
 export const ControlledInput=()=>{
     const [parentValue, setParentValue]=useState("")
-    return <input value={parentValue} onChange={action("want to change")}/>
+    return <input value={parentValue} onChange={(e)=>{setParentValue(e.currentTarget.value)}}/>
 }
 
 // export const ControlledCheckbox=()=>{
