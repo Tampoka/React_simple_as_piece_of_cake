@@ -10,24 +10,34 @@ import {OnOff2Uncontrolled} from "./components/OnOff2Uncontrolled/OnOff2Uncontro
 import {StarRating} from "./components/StarRating/StarRating";
 
 function App() {
-    let[ratingValue,setRatingValue]=useState<RatingValueType>(0)
-    let [collapsed, setCollapsed]=useState<boolean>(false)
-    let[on, setOn]=useState<boolean>(false)
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    let [collapsed, setCollapsed] = useState<boolean>(false)
+    let [on, setOn] = useState<boolean>(false)
+    const items = [{title: "Bob", value: 4}, {title: "John", value: 7}, {title: "Kate", value: 5}]
+    const onClick = (value: any) => {
+        alert(`user with id ${value} should be happy `)
+    }
     return (
         <div className={"App"}>
             <PageTitle title={"This as App component"}/>
             <PageTitle title={"My friends"}/>
             <OnOff/>
-            <OnOff2 onClick={setOn} on={on}/>
+            <OnOff2 onClick={setOn}
+                    on={on}/>
             <OnOff2Uncontrolled onChange={setOn}/>{on.toString()}
-            <Accordion titleValue={"What to eat"} onClick={setCollapsed} collapsed={collapsed}/>
+            <Accordion titleValue={"What to eat"}
+                       onClick={onClick}
+                       collapsed={collapsed}
+                       items={items}
+                       onChange={setCollapsed}/>
             {/* eslint-disable-next-line react/jsx-no-undef */}
             <UncontrolledAccordion titleValue={"Can you see me?"}/>
             {/*<UncontrolledAccordion titleValue={"Click me!!!"}/>*/}
             {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
-            <Rating value={ratingValue} onClick={setRatingValue}/>
-            <UncontrolledRating  onChange={setRatingValue}/>
+            <Rating value={ratingValue}
+                    onClick={setRatingValue}/>
+            <UncontrolledRating onChange={setRatingValue}/>
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
