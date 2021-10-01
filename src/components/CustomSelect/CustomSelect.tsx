@@ -1,5 +1,5 @@
 import React, {MouseEventHandler, useState} from "react";
-
+import s from "./CustomSelect.module.css"
 type CustomSelectPropsType = {
     selectValue: string
     onChange: (selectValue: string) => void
@@ -18,14 +18,14 @@ export function CustomSelect(props: CustomSelectPropsType) {
         setCollapsed(true)
     }*/
     return (
-        <div>
-            <div onClick={() => setCollapsed(!collapsed)}>{props.selectValue}</div>
+        <div className={s.select_wrapper}>
+            <div onClick={() => setCollapsed(!collapsed)} className={s.select_trigger}>{props.selectValue}</div>
             {!collapsed && props.items
                 .filter(i=>i.title!==props.selectValue)
                 .map(i => <div key={i.value} onClick={()=> {
                     props.onChange(i.title);
                     setCollapsed(true)
-                }}>{i.title}</div>)}
+                }} className={s.select_item}>{i.title}</div>)}
         </div>
     )
 }
