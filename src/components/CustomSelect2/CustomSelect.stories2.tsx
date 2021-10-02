@@ -1,17 +1,17 @@
 import React from 'react';
 import {ComponentMeta, Story} from '@storybook/react';
 import {action} from "@storybook/addon-actions";
-import {CustomSelect, CustomSelectPropsType} from "./CustomSelect";
+import {CustomSelect2, CustomSelectPropsType} from "./CustomSelect2";
 
 export default {
     title: 'components/CustomSelect2',
-    component: CustomSelect,
+    component: CustomSelect2,
     argTypes: {},
-} as ComponentMeta<typeof CustomSelect>;
+} as ComponentMeta<typeof CustomSelect2>;
 
 const callback = action("Select value change event fired")
 
-const Template: Story<CustomSelectPropsType> = (args) => <CustomSelect {...args} />;
+const Template: Story<CustomSelectPropsType> = (args) => <CustomSelect2 {...args} />;
 
 
 export const SelectWithoutValue = Template.bind({})
