@@ -27,6 +27,11 @@
 .select_item:hover {
     background-color: #cc8041;
 }
+
+.select_item:active {
+    border: 1px solid #7e1d06;
+}
+
 .select_triangle:active,
 .select_triangle:hover {
     cursor: pointer;
