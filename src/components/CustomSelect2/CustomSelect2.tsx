@@ -14,6 +14,7 @@ export type ItemType = {
 
 export function CustomSelect2(props: CustomSelect2PropsType) {
     const [active, setActive]=useState<boolean>(false)
+    const [hoveredItemValue, setHoveredItemValue]=useState(props.value)
 
     const selectedItem = props.items.find(i => i.value === props.value)
 
