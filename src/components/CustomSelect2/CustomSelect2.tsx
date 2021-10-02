@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import s from './CustomSelect2.module.css'
 
 export type CustomSelect2PropsType = {
@@ -13,19 +13,27 @@ export type ItemType = {
 }
 
 export function CustomSelect2(props: CustomSelect2PropsType) {
+    const [active, setActive]=useState<boolean>(false)
+
     const selectedItem = props.items.find(i => i.value === props.value)
+
+    const toggleItems=()=>setActive(!active)
+
+    const onItemClick=(value:any)=>{
+        props.onChange(value)
+        toggleItems()
+    }
     return (
         <>
-            <select name="" id="">
-                <option value="">Me</option>
-                <option value="">You</option>
-                <option value="">We</option>
-            </select>
             <div className={s.select+' '+s.active}>
-                <h3>{selectedItem && selectedItem.title}</h3>
-                <div className={s.items}>
-                    {props.items.map(i => <div key={i.value}>{i.title}</div>)}
-                </div>
+                <span className={s.main}
+                      onClick={toggleItems}>{selectedItem && selectedItem.title}</span>
+                {active&&
+                <div className={s.items}
+                     onClick={onItemClick}>
+                    {props.items.map(i => <div key={i.value}
+                    className={s.item+' '+(selectedItem===i?s.selected:'')}>{i.title}</div>)}
+                </div>}
             </div>
         </>
     )
