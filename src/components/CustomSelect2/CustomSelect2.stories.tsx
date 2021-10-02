@@ -9,8 +9,18 @@ export default {
     argTypes: {},
 } as ComponentMeta<typeof CustomSelect2>;
 
-export const BaseSelect = () => <CustomSelect2 onChange={action("Value changed")}
-                                                 value={"1"}
+export const WithValue = () =>
+    <>
+    <CustomSelect2 onChange={action("Value changed")}
+                                                 value={"2"}
                                                  items={[{value: "1", title: "Movie"},
                                                      {value: "2", title: "Book"},
                                                      {value: "3", title: "Walk"},]}/>
+    </>
+export const WithoutValue = () =>
+    <>
+    <CustomSelect2 onChange={action("Value changed")}
+                                                 items={[{value: "1", title: "Movie"},
+                                                     {value: "2", title: "Book"},
+                                                     {value: "3", title: "Walk"},]}/>
+    </>

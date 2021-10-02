@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import s from "./CustomSelect2.module.css"
+import React from "react";
+import s from './CustomSelect2.module.css'
 
 export type CustomSelect2PropsType = {
-    value: string
+    value?: string
     onChange: (Value: string) => void
     items: ItemType[]
 }
@@ -13,11 +13,20 @@ export type ItemType = {
 }
 
 export function CustomSelect2(props: CustomSelect2PropsType) {
-    const selectedItem=props.items.find(i=>i.value===props.value)
+    const selectedItem = props.items.find(i => i.value === props.value)
     return (
-        <div>
-            <h3>{selectedItem&&selectedItem.title}</h3>
-            {props.items.map(i=><div>{i.title}</div>)}
-        </div>
+        <>
+            <select name="" id="">
+                <option value="">Me</option>
+                <option value="">You</option>
+                <option value="">We</option>
+            </select>
+            <div className={s.select+' '+s.active}>
+                <h3>{selectedItem && selectedItem.title}</h3>
+                <div className={s.items}>
+                    {props.items.map(i => <div key={i.value}>{i.title}</div>)}
+                </div>
+            </div>
+        </>
     )
 }

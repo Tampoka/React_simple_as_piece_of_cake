@@ -1,38 +1,14 @@
-.select_wrapper {
-    padding: 10px;
-    min-width: 200px;
-    text-align: center;
+.select {
+    border: 1px solid black;
 }
 
-.select_trigger {
-    display: flex;
-    justify-content: space-between;
-
-    background-color: orangered;
-
-    font-size: 18px;
+.items {
+    display: none;
+    position: absolute;
     padding: 5px;
+    border: 1px solid black;
 }
 
-.select_trigger:hover,
-.select_trigger:active {
-    cursor:pointer;
-}
-.select_item {
-    text-align: left;
-    background-color: #c99e7b;
-    padding: 5px;
-}
-
-.select_item:hover {
-    background-color: #cc8041;
-}
-
-.select_item:active {
-    border: 1px solid #7e1d06;
-}
-
-.select_triangle:active,
-.select_triangle:hover {
-    cursor: pointer;
+.select.active .items {
+    display: block;
 }
