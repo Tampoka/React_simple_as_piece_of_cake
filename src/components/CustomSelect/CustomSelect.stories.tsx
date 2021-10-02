@@ -4,7 +4,7 @@ import {action} from "@storybook/addon-actions";
 import {CustomSelect, CustomSelectPropsType} from "./CustomSelect";
 
 export default {
-    title: 'components/CustomSelect2',
+    title: 'components/CustomSelect',
     component: CustomSelect,
     argTypes: {},
 } as ComponentMeta<typeof CustomSelect>;

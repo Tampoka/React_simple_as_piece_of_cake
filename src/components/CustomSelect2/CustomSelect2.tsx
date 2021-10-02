@@ -13,14 +13,10 @@ export type ItemType = {
 }
 
 export function CustomSelect2(props: CustomSelect2PropsType) {
-    const [collapsed, setCollapsed] = useState<boolean>(true)
-    const onItemClickedHandler = (title: string) => {
-        props.onChange(title)
-        setCollapsed(true)
-    }
+    const selectedItem=props.items.find(i=>i.value===props.value)
     return (
         <div>
-            <div>{}</div>
+            <h3>{selectedItem&&selectedItem.title}</h3>
             {props.items.map(i=><div>{i.title}</div>)}
         </div>
     )
