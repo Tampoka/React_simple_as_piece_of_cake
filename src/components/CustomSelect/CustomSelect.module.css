@@ -1,7 +1,9 @@
 .select_wrapper {
     padding: 10px;
     min-width: 200px;
+    min-height: 100px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .select_trigger {
@@ -18,6 +20,10 @@
 .select_trigger:active {
     cursor:pointer;
 }
+
+.select_list {
+    /*position: absolute;*/
+}
 .select_item {
     text-align: left;
     background-color: #c99e7b;
@@ -29,7 +35,7 @@
 }
 
 .select_item:active {
-    border: 1px solid #7e1d06;
+    border: 2px solid #d35132;
 }
 
 .select_triangle:active,
