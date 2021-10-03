@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useReducer, useState} from "react";
 import "./../../App.css"
 
 type UncontrolledAccordionPropsType = {
@@ -8,8 +8,21 @@ type UncontrolledAccordionPropsType = {
      */
 }
 
+type ActionType={
+    type:string
+}
+const reducer=(state:boolean,action:ActionType)=>{
+  if(action.type==="TOGGLE-COLLAPSED"){
+      return !state
+  }
+
+    return state
+}
+
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
-    let [collapsed, setCollapsed] = useState(false)
+    console.log("UncontrolledAccordion rendering")
+    // let [collapsed, setCollapsed] = useState(false)
+    let [collapsed, dispatch] = useReducer(reducer,false)
 
     return <div className={"accUncontrolled"}>
         <AccordionTitle title={props.titleValue} onClick={()=>{setCollapsed(!collapsed)}}/>
@@ -25,14 +38,14 @@ type AccordionTitlePropsType = {
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-    // console.log('AccordionTitle is rendering')
+    console.log('AccordionTitle is rendering')
     return <h2 onClick={()=>{props.onClick()}} className="accordionTitle">{props.title} </h2>
 
 
 }
 
 function AccordionBody() {
-    // console.log('AccordionBody is rendering')
+    console.log('AccordionBody is rendering')
     return <ul className={"accBody"}>
         <li>1</li>
         <li>2</li>
