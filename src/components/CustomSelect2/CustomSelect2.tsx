@@ -27,7 +27,8 @@ export function CustomSelect2(props: CustomSelect2PropsType) {
     }
     return (
         <>
-            <div className={s.select}>
+            <div className={s.select} onKeyUp={()=>{
+                console.log("press")}} tabIndex={0}>
                 <span className={s.main}
                       onClick={toggleItems}>
                     {selectedItem && selectedItem.title}</span>
