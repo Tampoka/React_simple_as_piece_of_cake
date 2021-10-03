@@ -15,9 +15,9 @@ export type ItemType = {
 export function CustomSelect2(props: CustomSelect2PropsType) {
     const [active, setActive] = useState<boolean>(false)
     const [hoveredItemValue, setHoveredItemValue] = useState(props.value)
-    useEffect(()=>{
+    useEffect(() => {
         setHoveredItemValue(props.value)
-    },[props.value])
+    }, [props.value])
 
     const selectedItem = props.items.find(i => i.value === props.value)
     const hoveredItem = props.items.find(i => i.value === hoveredItemValue)
@@ -30,13 +30,24 @@ export function CustomSelect2(props: CustomSelect2PropsType) {
     }
 
     const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
-        for (let i = 0; i < props.items.length; i++) {
-            if (props.items[i].value === hoveredItemValue) {
-                if(props.items[i+1]){
-                    props.onChange(props.items[i+1].value)
-                    break;
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+            for (let i = 0; i < props.items.length; i++) {
+                if (props.items[i].value === hoveredItemValue) {
+                    const expectantElement = e.key === "ArrowDown"
+                        ? props.items[i + 1]
+                        : props.items[i - 1]
+                    if (expectantElement) {
+                        props.onChange(expectantElement.value)
+                        return;
+                    }
                 }
             }
+            if(!selectedItem){
+                props.onChange(props.items[0].value)
+            }
+        }
+        if(e.key==="Enter"||e.key==="Escape"){
+            setActive(false)
         }
     }
     return (
