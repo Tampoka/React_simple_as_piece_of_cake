@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import s from './CustomSelect2.module.css'
 
 export type CustomSelect2PropsType = {
-    value?: string
-    onChange: (Value: string) => void
+    value?: any
+    onChange: (value: any) => void
     items: ItemType[]
 }
 

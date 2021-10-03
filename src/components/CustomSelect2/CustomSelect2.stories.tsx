@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ComponentMeta, Story} from '@storybook/react';
 import {action} from "@storybook/addon-actions";
 import {CustomSelect2, CustomSelect2PropsType} from "./CustomSelect2";
@@ -9,18 +9,23 @@ export default {
     argTypes: {},
 } as ComponentMeta<typeof CustomSelect2>;
 
-export const WithValue = () =>
-    <>
-    <CustomSelect2 onChange={action("Value changed")}
-                                                 value={"2"}
-                                                 items={[{value: "1", title: "Movie"},
-                                                     {value: "2", title: "Book"},
-                                                     {value: "3", title: "Walk"},]}/>
+export const WithValue = () => {
+    const [value, setValue] = useState('2')
+    return <>
+        <CustomSelect2 onChange={setValue}
+                       value={value}
+                       items={[{value: "1", title: "Movie"},
+                           {value: "2", title: "Book"},
+                           {value: "3", title: "Walk"},]}/>
     </>
-export const WithoutValue = () =>
-    <>
-    <CustomSelect2 onChange={action("Value changed")}
-                                                 items={[{value: "1", title: "Movie"},
-                                                     {value: "2", title: "Book"},
-                                                     {value: "3", title: "Walk"},]}/>
+}
+export const WithoutValue = () => {
+    const [value, setValue] = useState(null)
+    return <>
+        <CustomSelect2 onChange={setValue}
+                       value={null}
+                       items={[{value: "1", title: "Movie"},
+                           {value: "2", title: "Book"},
+                           {value: "3", title: "Walk"},]}/>
     </>
+}
