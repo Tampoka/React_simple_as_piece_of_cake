@@ -23,7 +23,7 @@ export const WithoutValue = () => {
     const [value, setValue] = useState(null)
     return <>
         <CustomSelect2 onChange={setValue}
-                       value={null}
+                       value={value}
                        items={[{value: "1", title: "Movie"},
                            {value: "2", title: "Book"},
                            {value: "3", title: "Walk"},]}/>
