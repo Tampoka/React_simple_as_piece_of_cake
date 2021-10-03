@@ -13,27 +13,31 @@ export type ItemType = {
 }
 
 export function CustomSelect2(props: CustomSelect2PropsType) {
-    const [active, setActive]=useState<boolean>(false)
-    const [hoveredItemValue, setHoveredItemValue]=useState(props.value)
+    const [active, setActive] = useState<boolean>(false)
+    const [hoveredItemValue, setHoveredItemValue] = useState(props.value)
 
     const selectedItem = props.items.find(i => i.value === props.value)
+    const hoveredItem = props.items.find(i => i.value === hoveredItemValue)
 
-    const toggleItems=()=>setActive(!active)
+    const toggleItems = () => setActive(!active)
 
-    const onItemClick=(value:any)=>{
+    const onItemClick = (value: any) => {
         props.onChange(value)
         toggleItems()
     }
     return (
         <>
-            <div className={s.select+' '+s.active}>
+            <div className={s.select}>
                 <span className={s.main}
-                      onClick={toggleItems}>{selectedItem && selectedItem.title}</span>
-                {active&&
-                <div className={s.items}
-                     onClick={onItemClick}>
+                      onClick={toggleItems}>
+                    {selectedItem && selectedItem.title}</span>
+                {active &&
+                <div className={s.items}>
                     {props.items.map(i => <div key={i.value}
-                    className={s.item+' '+(selectedItem===i?s.selected:'')}>{i.title}</div>)}
+                                               onMouseEnter={() => {setHoveredItemValue(i.value)}}
+                                               className={s.item + ' ' + (hoveredItem === i ? s.selected : '')}
+                                               onClick={() => {onItemClick(i.value)}}>
+                        {i.title}</div>)}
                 </div>}
             </div>
         </>
