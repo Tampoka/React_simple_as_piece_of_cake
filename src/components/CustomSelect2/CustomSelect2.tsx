@@ -42,11 +42,11 @@ export function CustomSelect2(props: CustomSelect2PropsType) {
                     }
                 }
             }
-            if(!selectedItem){
+            if (!selectedItem) {
                 props.onChange(props.items[0].value)
             }
         }
-        if(e.key==="Enter"||e.key==="Escape"){
+        if (e.key === "Enter" || e.key === "Escape") {
             setActive(false)
         }
     }
