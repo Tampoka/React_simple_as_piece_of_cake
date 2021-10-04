@@ -1,30 +1,12 @@
 import React, {useReducer} from "react";
 import "./../../App.css"
+import {reducer, TOGGLE_CONSTANT} from "./Reducer";
 
 type UncontrolledAccordionPropsType = {
     titleValue: string
     /**
      * accordion title
      */
-}
-
-type ActionType = {
-    type: string
-}
-
-const TOGGLE_CONSTANT = "TOGGLE-COLLAPSED"
-const reducer = (state: boolean, action: ActionType) => {
-    /*    console.log("reducer started ")
-        console.log(state)
-        console.log(action)
-        console.log("reducer ended")*/
-    switch (action.type) {
-        case TOGGLE_CONSTANT:
-            return !state
-        default:
-            throw new Error("Bad action type")
-    }
-    return state
 }
 
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
