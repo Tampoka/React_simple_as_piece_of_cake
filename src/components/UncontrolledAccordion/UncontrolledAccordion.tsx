@@ -1,4 +1,4 @@
-import React, {useReducer, useState} from "react";
+import React, {useReducer} from "react";
 import "./../../App.css"
 
 type UncontrolledAccordionPropsType = {
@@ -11,9 +11,14 @@ type UncontrolledAccordionPropsType = {
 type ActionType={
     type:string
 }
+
+const TOGGLE_CONSTANT="TOGGLE-COLLAPSED"
 const reducer=(state:boolean,action:ActionType)=>{
-    debugger
-  if(action.type==="TOGGLE-COLLAPSED"){
+/*    console.log("reducer started ")
+    console.log(state)
+    console.log(action)
+    console.log("reducer ended")*/
+  if(action.type===TOGGLE_CONSTANT){
       return !state
   }
 
@@ -27,7 +32,7 @@ export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
 
     return <div className={"accUncontrolled"}>
         {/*<AccordionTitle title={props.titleValue} onClick={()=>{setCollapsed(!collapsed)}}/>*/}
-        <AccordionTitle title={props.titleValue} onClick={()=>{dispatch({type:"TOGGLE-COLLAPSED"})}}/>
+        <AccordionTitle title={props.titleValue} onClick={()=>{dispatch({type:TOGGLE_CONSTANT})}}/>
         {/*<button onClick={() => !collapsed ? setCollapsed(true) : setCollapsed((false))}>TOGGLE</button>*/}
         {/*<button onClick={() => setCollapsed(!collapsed)}>TOGGLE</button>*/}
         {!collapsed && <AccordionBody/>}
