@@ -12,7 +12,7 @@ type UncontrolledAccordionPropsType = {
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
     console.log("UncontrolledAccordion rendering")
     // let [collapsed, setCollapsed] = useState(false)
-    let [collapsed, dispatch] = useReducer(reducer, false)
+    let [state, dispatch] = useReducer(reducer, {collapsed: false})
 
     return <div className={"accUncontrolled"}>
         {/*<AccordionTitle title={props.titleValue} onClick={()=>{setCollapsed(!collapsed)}}/>*/}
@@ -21,7 +21,7 @@ export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
         }}/>
         {/*<button onClick={() => !collapsed ? setCollapsed(true) : setCollapsed((false))}>TOGGLE</button>*/}
         {/*<button onClick={() => setCollapsed(!collapsed)}>TOGGLE</button>*/}
-        {!collapsed && <AccordionBody/>}
+        {!state.collapsed && <AccordionBody/>}
     </div>
 }
 
