@@ -22,7 +22,6 @@ export const Example1 = () => {
     const [users, setUsers] = useState(['John', 'Bob', 'Kate', 'Ann'])
 
     const addUser = () => {
-        // users.push('Alex'+new Date().getTime())
         const newUsers = [...users, 'Alex' + new Date().getTime()]
         setUsers(newUsers)
     }
