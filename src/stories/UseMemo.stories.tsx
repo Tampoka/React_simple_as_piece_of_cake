@@ -4,7 +4,7 @@ export default {
     title: 'useMemo'
 }
 
-export const Example1 = () => {
+export const ComplexCalculationExample = () => {
     const [a, setA] = useState<number>(0)
     const [b, setB] = useState<number>(0)
 
@@ -34,5 +34,27 @@ export const Example1 = () => {
         <hr/>
         <div>Result for a: {resultA}</div>
         <div>Result for b: {resultB}</div>
+    </>
+}
+
+
+
+const UsersSecret = (props: { users: Array<string> }) => {
+    console.log("USERS")
+    return <div>
+        {props.users.map((u, i) => <div key={i}>{u}</div>)}
+    </div>
+}
+const Users = React.memo(UsersSecret)
+
+export const HelpingReactMemoExample = () => {
+    console.log("Example")
+    const [count, setCount] = useState(0)
+    const [users, setUsers] = useState(['John', 'Bob', 'Kate', 'Ann'])
+
+    return <>
+        <button onClick={() => setCount(count + 1)}>+</button>
+        {count}
+        <Users users={users}/>
     </>
 }
