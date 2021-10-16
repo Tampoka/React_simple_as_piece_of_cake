@@ -7,7 +7,7 @@ export default {
 function generateData (){
 //    complex calculation
     console.log('generateData')
-    return 4449303923232321
+    return 1
 }
 export const Example1 = () => {
     console.log("Example")
@@ -16,7 +16,9 @@ export const Example1 = () => {
 
     const [count, setCount] = useState(generateData)//[0, function(newValue)]
 
+    const changer=(state:number)=>state+1
+
     return <>
-        <button onClick={() => setCount(count + 1)}>+</button>
+        <button onClick={() => setCount((state)=>state+1)}>+</button>
     </>
 }
