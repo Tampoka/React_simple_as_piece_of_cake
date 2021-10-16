@@ -52,9 +52,19 @@ export const HelpingReactMemoExample = () => {
     const [count, setCount] = useState(0)
     const [users, setUsers] = useState(['John', 'Bob', 'Kate', 'Ann'])
 
+    const newArray = useMemo(()=>{
+        return users.filter(u=>u.toLowerCase().indexOf("a")>-1)
+    },[users])
+
+    const addUser = () => {
+        const newUsers = [...users, 'Alex' + new Date().getTime()]
+        setUsers(newUsers)
+    }
+
     return <>
         <button onClick={() => setCount(count + 1)}>+</button>
         {count}
-        <Users users={users.filter(u=>u.toLowerCase().indexOf("a")>-1)}/>
+        <button onClick={() =>addUser()}>add user</button>
+        <Users users={newArray}/>
     </>
 }
