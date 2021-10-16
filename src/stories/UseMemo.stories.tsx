@@ -73,29 +73,29 @@ export const HelpingReactMemoExample = () => {
 export const AsUseCallback = () => {
     console.log("AsUseCallback")
     const [count, setCount] = useState(0)
-    const [books, setBooks] = useState(['React', 'Bob', 'Kate', 'Ann'])
-
-    const newArray = useMemo(()=>{
-        return books.filter(b=>b.toLowerCase().indexOf("a")>-1)
-    },[books])
+    const [books, setBooks] = useState(['React', 'HTML', 'JS', 'CSS'])
 
     const addBook = () => {
+        console.log(books)
         const newBooks = [...books, 'Angular' + new Date().getTime()]
         setBooks(newBooks)
     }
 
+    const memoizedAddBook=useMemo(()=>{
+        return addBook
+    },[books])
     return <>
         <button onClick={() => setCount(count + 1)}>+</button>
         {count}
-        <Book books={newArray} addBook={addBook}/>
+        <Book addBook={memoizedAddBook}/>
     </>
 }
 
-const BooksSecret = (props: { books: Array<string> ,addBook:()=>void}) => {
+const BooksSecret = (props: { books?: Array<string> ,addBook:()=>void}) => {
     console.log("BooksSecret")
     return <div>
         <button onClick={() =>props.addBook()}>add book</button>
-        {props.books.map((b, i) => <div key={i}>{b}</div>)}
+        {/*{props.books.map((b, i) => <div key={i}>{b}</div>)}*/}
     </div>
 }
 
