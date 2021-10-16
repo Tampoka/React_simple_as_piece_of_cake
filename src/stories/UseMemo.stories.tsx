@@ -40,7 +40,7 @@ export const ComplexCalculationExample = () => {
 
 
 const UsersSecret = (props: { users: Array<string> }) => {
-    console.log("USERS")
+    console.log("USERS Secret")
     return <div>
         {props.users.map((u, i) => <div key={i}>{u}</div>)}
     </div>
@@ -48,13 +48,13 @@ const UsersSecret = (props: { users: Array<string> }) => {
 const Users = React.memo(UsersSecret)
 
 export const HelpingReactMemoExample = () => {
-    console.log("Example")
+    console.log("HelpingReactMemo")
     const [count, setCount] = useState(0)
     const [users, setUsers] = useState(['John', 'Bob', 'Kate', 'Ann'])
 
     return <>
         <button onClick={() => setCount(count + 1)}>+</button>
         {count}
-        <Users users={users}/>
+        <Users users={users.filter(u=>u.toLowerCase().indexOf("a")>-1)}/>
     </>
 }
