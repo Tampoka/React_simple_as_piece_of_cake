@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React_simple_as_piece_of_cake/static/css/main.fd09da01.chunk.css",
+    "main.js": "/React_simple_as_piece_of_cake/static/js/main.8498867a.chunk.js",
+    "main.js.map": "/React_simple_as_piece_of_cake/static/js/main.8498867a.chunk.js.map",
+    "runtime-main.js": "/React_simple_as_piece_of_cake/static/js/runtime-main.044db72f.js",
+    "runtime-main.js.map": "/React_simple_as_piece_of_cake/static/js/runtime-main.044db72f.js.map",
+    "static/js/2.a48c6737.chunk.js": "/React_simple_as_piece_of_cake/static/js/2.a48c6737.chunk.js",
+    "static/js/2.a48c6737.chunk.js.map": "/React_simple_as_piece_of_cake/static/js/2.a48c6737.chunk.js.map",
+    "static/js/3.8c7b24ff.chunk.js": "/React_simple_as_piece_of_cake/static/js/3.8c7b24ff.chunk.js",
+    "static/js/3.8c7b24ff.chunk.js.map": "/React_simple_as_piece_of_cake/static/js/3.8c7b24ff.chunk.js.map",
+    "index.html": "/React_simple_as_piece_of_cake/index.html",
+    "static/css/main.fd09da01.chunk.css.map": "/React_simple_as_piece_of_cake/static/css/main.fd09da01.chunk.css.map",
+    "static/js/2.a48c6737.chunk.js.LICENSE.txt": "/React_simple_as_piece_of_cake/static/js/2.a48c6737.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.044db72f.js",
+    "static/js/2.a48c6737.chunk.js",
+    "static/css/main.fd09da01.chunk.css",
+    "static/js/main.8498867a.chunk.js"
+  ]
+}
